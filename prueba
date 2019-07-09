@@ -2,8 +2,13 @@
 <html>
   <head>
     <tittle>El último café</tittle>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js" ></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.css" type="text/stylesheet"></link> 
   </head>
   <body>
     <label> Esto es una prueba </label>
+    <script>
+       swal ("Hola","Esto es swal","success");
+    </script>
   </body>
 </html>
