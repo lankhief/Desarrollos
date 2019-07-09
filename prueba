@@ -1,14 +1,64 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <tittle>El último café</tittle>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js" ></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.css" type="text/stylesheet"></link> 
-  </head>
-  <body>
-    <label> Esto es una prueba </label>
-    <script>
-       swal ("Hola","Esto es swal","success");
-    </script>
-  </body>
-</html>
+    <body>
+    
+      <label> prueba de swal </label>
+    
+      <script>
+
+              
+          /* 
+
+          https://sweetalert.js.org/
+          swal(texto en negrita, texto simple inferior, icono);
+             
+             - icono : successs, warning, 
+          */   
+ 
+         /*
+           swal("¿Está seguro?","   ","question");
+ 
+         
+           swal("Are you sure you want to do this?", {
+              buttons: ["Sí", "No"],
+            });   
+         */
+           
+         swal("¿Está seguro?", {
+  buttons: {
+    cancel: "Cancelar",
+    catch: {
+      text: "Aceptar",
+      value: "Aceptar",
+    },
+    //defeat: true,
+  },
+})
+
+.then((value) => {
+  switch (value) 
+  {
+ 
+    case "Cancelar":
+                    swal("cancelar");
+                    break;     
+ 
+    case "defeat":
+      		  swal("Por defecto!");
+      		  break;
+    
+    case "Aceptar":
+                  swal("Aceptar!", "Presionaste aceptar", "success");
+                  break;
+    
+    default:      swal("No se!");
+  
+  }
+  
+});  
+
+         
+
+     </script>
+  
+    </body>
+
+ </html>
